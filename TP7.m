@@ -126,7 +126,7 @@ for z=1:length(Power)
         D(z)=(Power(z)-simData(z))/10;
         
     elseif (strcmp(Sitetype(z), '1T4'));
-        reflat=dataSet(site).measurements.lat(553);% The turn occurs around point with index 1125
+        reflat=dataSet(site).measurements.lat(553);% The turn occurs around point with index 553
         reflon=dataSet(site).measurements.lon(553);
         [arclen,~]=distance(Lat(z),Long(z),reflat,reflon);
         R2=arclen*R*pi/180;
@@ -137,7 +137,7 @@ for z=1:length(Power)
         D(z)=(Power(z)-simData(z))/10;
         
     elseif (strcmp(Sitetype(z), '1T6'));
-        reflat=dataSet(site).measurements.lat(897);% The turn occurs around point with index 1125
+        reflat=dataSet(site).measurements.lat(897);% The turn occurs around point with index 897
         reflon=dataSet(site).measurements.lon(897);
         [arclen,~]=distance(Lat(z),Long(z),reflat,reflon);
         R2=arclen*R*pi/180;

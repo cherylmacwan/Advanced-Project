@@ -1,7 +1,7 @@
 clear all
 clc
-load('siteAndMeasurementsData_LessThan15m.mat')
-for mesndx=113
+load('siteAndMeasurementsData.mat')
+for mesndx=7
 %     len=length(dataSet(mesndx).measurements.pwr);
 %     C=zeros(len,2);
 %     figure(mesndx)
@@ -15,12 +15,12 @@ for mesndx=113
 %     A{1,mesndx}=C;
     C(1,1)=dataSet(mesndx).siteInfo.lon;
     C(1,2)=dataSet(mesndx).siteInfo.lat;
-    xlswrite('TP113_newestR',C,1,'B2');
+    xlswrite('TP7R',C,1,'B2');
     B={'Sr.No','Long','Lat'};
-    xlswrite('TP113_newestR',B,1,'A1');
-    D=1; %1:len;
+    xlswrite('TP7R',B,1,'A1');
+    D=1;%1:len;
     D=transpose(D);
-    xlswrite('TP113_newestR',D,1,'A2');
+    xlswrite('TP7R',D,1,'A2');
     warning('off','MATLAB:xlswrite:AddSheet')
 %     nn=1:len;
 %     fitt=fit(transpose(1:len),dataSet(mesndx).measurements.pwr,'poly2');
